@@ -14,6 +14,10 @@ Perro::Perro() {
     this->color = "";
 }
 
+Perro::Perro(string nombre, int edad, string raza, string color, string tamanio)
+    : nombre(nombre), edad(edad), raza(raza), color(color), tamanio(tamanio) {
+}
+
 void Perro::ladrar() {
     cout << "Guau Guau" << endl;
 }
@@ -75,6 +79,22 @@ Perro::~Perro() {
     delete pPropietario;
 }
 
+// Metodos nuevos al agregar la clase veterinario
 
+void Perro::asignarVeterinario(Veterinario* veterinario) {
+    this->pVeterinario = veterinario;
+}
 
+Veterinario* Perro::getVeterinario() {
+    return pVeterinario;
+}
+
+// Metodos nuevos al agregar la clase raza
+void Perro::asignarRaza(Raza* raza) {
+    this->pRaza = raza;
+}
+
+Raza* Perro::getRazaClass(){
+    return pRaza;
+}
 
