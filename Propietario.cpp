@@ -6,8 +6,7 @@
 using namespace std;
 
 //TODO Agrege el constructor por defecto y agrege un constructor con dos parametros
-Propietario::Propietario(){
-}
+
 
 Propietario::Propietario(string nombre) : nombre(nombre) {
 }

@@ -9,7 +9,6 @@
 using namespace std;
 
 int main() {
-
     // Instanciar
     Perro lunita;
     lunita.setNombre("lunita");
@@ -17,31 +16,30 @@ int main() {
     lunita.setEdad(5);
     lunita.setTamanio("Grande");
     lunita.setRaza("Mastin napolitano");
-
-    //Agregar un nuevo pPropietario a lunita
-    lunita.agregarPropietario("Carlos Zapata", "102842313");
-
-    // Consultar el nombre del pPropietario del perro lunita
+    lunita.agregarPropietario("Carlos Zapata", 102842313);
     cout << "El nombre del pPropietario del perro " << lunita.getNombre() << " es " << lunita.getPropietario()->getNombre() << endl;
 
-    // Crear objeto de la clase Perro con constructor de parámetros utilizando new
     Perro* firulais = new Perro("Firulais", 5, "Mastin napolitano", "Negro", "Grande");
 
-    // Llamar al método ladrar del objeto creado
+    Raza* mastinNapolitano = new Raza("Mastin Napolitano", "Italia");
+
+    firulais->asignarRaza(mastinNapolitano);
+
     firulais->ladrar();
 
-    // Crear objeto de la clase Propietario con constructor de un solo parámetro utilizando new
     Propietario* propietario1 = new Propietario("David Nino");
 
-    // Usar sets para definir el resto de los atributos
     propietario1->setDocIdentidad(1114874514);
     propietario1->setEdad(30);
 
-    // Imprimir información del propietario usando el método mostrarInfo
     propietario1->mostrarInfo();
-    cout << "El nombre del pPropietario del perro " << firulais->getNombre() << " es " << firulais->getPropietario()->getNombre() << endl;
 
-    // Liberar memoria del objeto creado con new
+    cout << "Nombre de Firulais: " << firulais->getNombre() << endl;
+    cout << "Raza de Firulais: " << firulais->getRazaClass()->getNombre() << endl;
+    cout << "País de origen de la raza de Firulais: " << firulais->getRazaClass()->getPaisOrigen() << endl;
+
+    delete lunita.getPropietario();
+    delete firulais->getRazaClass();
     delete firulais;
     delete propietario1;
 

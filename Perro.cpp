@@ -22,7 +22,7 @@ void Perro::ladrar() {
     cout << "Guau Guau" << endl;
 }
 
-void Perro::agregarPropietario(string nombre, string docIdentidad) {
+void Perro::agregarPropietario(string nombre, int docIdentidad) {
     // Asocia a la variable de instancia pPropietario un nuevo pPropietario
     // Es memoria dinámica, en el destructor se debe liberar
     this->pPropietario = new Propietario(nombre, docIdentidad);
@@ -31,6 +31,7 @@ void Perro::agregarPropietario(string nombre, string docIdentidad) {
 void Perro::setPropietario(Propietario *pPropietario) {
     this->pPropietario = pPropietario;
 }
+
 Propietario *Perro::getPropietario() {
     return this->pPropietario;
 }
@@ -94,7 +95,7 @@ void Perro::asignarRaza(Raza* raza) {
     this->pRaza = raza;
 }
 
-Raza* Perro::getRazaClass(){
+Raza* Perro::getRazaClass() {
     return pRaza;
 }
 

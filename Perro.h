@@ -57,7 +57,7 @@ public:
     Propietario * getPropietario();
 
     // Sirve para.......
-    void agregarPropietario(string nombre,string docIdentidad);
+    void agregarPropietario(string nombre,int docIdentidad);
 
     // Sirve para relacionar dos clases cuando ya se tiene un objeto
     void setPropietario(Propietario * pPropietario);
