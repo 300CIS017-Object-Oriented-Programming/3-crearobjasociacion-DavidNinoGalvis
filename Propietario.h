@@ -1,5 +1,6 @@
 //
 // Created by lufe y Gonzo Feb2024.
+// Estudiante: David Nino Galvis
 //
 
 #ifndef PROPIETARIO_H

@@ -1,3 +1,5 @@
+// Estudiante: David Nino
+
 #include <iostream>
 #include "Perro.h"
 #include "Propietario.h"
