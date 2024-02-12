@@ -1,6 +1,10 @@
 #include <iostream>
 #include "Perro.h"
 #include "Propietario.h"
+#include "Perro.cpp"
+#include "Propietario.cpp"
+
+using namespace std;
 
 int main() {
 
@@ -16,7 +20,7 @@ int main() {
     firulais.agregarPropietario("Carlos Zapata", "102842313");
 
     // Consultar el nombre del pPropietario del perro Firulais
-    std::cout<< "El nombre del pPropietario del perro "<<firulais.getNombre() << " es " << firulais.getPropietario()->getNombre()<<std::endl;
+    cout<< "El nombre del pPropietario del perro "<<firulais.getNombre() << " es " << firulais.getPropietario()->getNombre()<<endl;
 
     return 0;
 }

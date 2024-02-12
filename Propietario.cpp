@@ -3,19 +3,20 @@
 //
 
 #include "Propietario.h"
+using namespace std;
 
 //TODO Agrege el constructor por defecto y agrege un constructor con dos parametros
 
 
-Propietario::Propietario(std::string nombre, std::string docIdentidad) {
+Propietario::Propietario(string nombre, string docIdentidad) {
  this->nombre = nombre;
  this->docIdentidad = docIdentidad;
 }
 
-std::string Propietario::getNombre()  {
+string Propietario::getNombre()  {
     return nombre;
 }
 
-void Propietario::setNombre(std::string nombre) {
+void Propietario::setNombre(string nombre) {
     this->nombre = nombre;
 }
